@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <nav class="mx-4 my-2 px-2 h-10 flex justify-between items-center bg-white rounded-4xl">
+        <p class="mx-4 text-2xl font-semibold">VMS</p>
+        <div class="flex">
+            <ul class="flex gap-4 items-center">
+                <li>Accueil</li>
+                <li>A propos</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class=" flex items-center">
+            <a href="" class="px-4 py-1 text-white bg-sky-400 rounded-4xl">Voter</a>
+        </div>
+    </nav>
+    <div class="mx-4 my-4 flex justify-between gap-4">
+        <div class="w-1/2">
+            <h1>Simplifiez vos démarches et gagnez du temps</h1>
+            <p>
+                Gérer vos votes n’a jamais été aussi simple. Une plateforme moderne, intuitive et sécurisée pour tous vos besoins.
+           </p>
+            <a href="" class="p-2 text-white bg-sky-400 rounded-2xl">Se connecter</a>
+        </div>
+        <div class="w-1/2">
+            <img src="{{asset('images/vote.jpg')}}" alt=""
+                class="w-full h-auto rounded-3xl object-cover shadow-lgr"
+            >
+        </div>
+    </div>
+{% endblock %}
