@@ -15,10 +15,10 @@ class ElectionType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('vote', EntityType::class, [
-                'class' => Vote::class,
-                'choice_label' => 'id',
-            ])
+            // ->add('vote', EntityType::class, [
+            //     'class' => Vote::class,
+            //     'choice_label' => 'id',
+            // ])
         ;
     }
 

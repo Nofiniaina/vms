@@ -27,6 +27,7 @@ final class VoteController extends AbstractController
         $voteForm->handleRequest($request);
 
         if($voteForm->isSubmitted() && $voteForm->isValid()) {
+            $vote->setFinish(false);
             $em->persist($vote);
             $em->flush();
 
@@ -34,7 +35,7 @@ final class VoteController extends AbstractController
         }
 
         return $this->render('vote/create.html.twig', [
-            
+            'voteForm' => $voteForm->createView()
         ]);
     }
 

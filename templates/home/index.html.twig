@@ -16,18 +16,23 @@
             <a href="" class="px-4 py-1 text-white bg-sky-400 rounded-4xl">Voter</a>
         </div>
     </nav>
-    <div class="mx-4 my-4 flex justify-between gap-4">
-        <div class="w-1/2">
-            <h1>Simplifiez vos démarches et gagnez du temps</h1>
-            <p>
-                Gérer vos votes n’a jamais été aussi simple. Une plateforme moderne, intuitive et sécurisée pour tous vos besoins.
-           </p>
-            <a href="" class="p-2 text-white bg-sky-400 rounded-2xl">Se connecter</a>
+    <div class="mx-6 my-10 flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="md:w-1/2 space-y-5">
+            <h1 class="text-4xl font-bold text-gray-900 leading-tight">
+                Simplifiez vos démarches et gagnez du temps
+            </h1>
+            <p class="text-gray-600 text-lg">
+                Gérez vos votes n’a jamais été aussi simple. Une plateforme moderne, intuitive et sécurisée pour tous vos besoins.
+            </p>
+            <a href="#" class="inline-block px-6 py-2 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-full shadow-sm transition-all duration-200">
+                Se connecter
+            </a>
         </div>
-        <div class="w-1/2">
-            <img src="{{asset('images/vote.jpg')}}" alt=""
-                class="w-full h-auto rounded-3xl object-cover shadow-lgr"
-            >
+
+        <div class="md:w-1/2 flex justify-center">
+            <img src="{{ asset('images/vote.jpg') }}" alt="Vote illustration"
+                class="w-full max-w-md h-auto rounded-3xl object-cover shadow-lg">
         </div>
     </div>
+
 {% endblock %}
