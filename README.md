@@ -33,14 +33,14 @@ Vote processing is handled **asynchronously** via **RabbitMQ**, ensuring perform
   * Process votes in the background (insert, validate, count)
   * Return a quick response to the user while ensuring reliable processing
 
-### **Cache / Queue (optional)**
+### **Cache (optional)**
 
 * **Redis** *(planned for future enhancement)* – for caching or real-time stats.
 
 ### **Other Tools**
 
 * **Symfony Messenger** – async message handling with RabbitMQ
-* **TailwindCSS** *(or Bootstrap)* – for the frontend interface
+* **TailwindCSS** – for the frontend interface
 * **RabbitMQ Management UI** – admin interface available at `http://localhost:15672`
 
 
@@ -79,13 +79,13 @@ composer install
 ### Run Symfony server:
 
 ```bash
-symfony serve -d
+symfony serve
 ```
 
 ### Consume RabbitMQ messages:
 
 ```bash
-php bin/console messenger:consume rabbitmq --time-limit=3600
+php bin/console messenger:consume async -vv
 ```
 
 ### Start RabbitMQ:
